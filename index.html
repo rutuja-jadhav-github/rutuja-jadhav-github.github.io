@@ -1,37 +1,210 @@
----
-layout: default
-title: Home
----
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rutuja Jadhav</title>
 
-<div class="posts">
-  {% for post in paginator.posts %}
-  <div class="post">
-    <h1 class="post-title">
-      <a href="{{ post.url }}">
-        {{ post.title }}
-      </a>
-    </h1>
+  <link rel="stylesheet" href="styles.css">
 
-    <span class="post-date">{{ post.date | date_to_string }}</span>
+    <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
 
-    {{ post.content }}
+
+
+<body>
+
+<!-- STICKY TOP NAV -->
+<nav class="top-nav">
+  <div class="top-nav-links">
+    <a href="#profile">Profile</a>
+    <a href="#experience">Relevant Experience</a>
+    <a href="#projects">Projects</a>
+    <a href="#blog">Math for ML Blog</a>
+    <a href="#pubs">Publications</a>
   </div>
-  {% endfor %}
+</nav>
+
+
+<div class="container">
+
+  <!-- LEFT SIDEBAR -->
+  <aside class="sidebar">
+
+    <h1>Rutuja Jadhav</h1>
+
+    <p class="subtitle">
+    <span class="strong-line">Data Science and Machine Learning</span><br>
+    Center for Data Science<br>
+    New York University
+    </p>
+
+     <!-- <p>
+      Data Science and Machine Learning<br>
+      Center for Data Science<br>
+      New York University
+     </p> -->
+    
+    <img class="profile-pic" src="assets/img/profile_30Aug.png" alt="profile photo">
+
+    <div class="social-links">
+
+      <a href="https://github.com/rutuja-jadhav-github?tab=repositories" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i><span>GitHub</span></a>
+
+      <a href="https://www.linkedin.com/in/rutuja-jadhav-b96b2aa7/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-linkedin"></i><span>LinkedIn</span></a>
+
+      <a href="https://rutuja-jadhav-github.github.io/Math-for-ML-Blog-byRutuja/" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-globe"></i><span>Blog</span></a>
+
+      <a href="mailto:rdj2033@nyu.edu"><i class="fa-solid fa-envelope"></i><span>rdj2033@nyu.edu</span></a>
+
+    </div>
+
+  
+
+
+
+  </aside>
+
+  <!-- RIGHT CONTENT -->
+  <main class="content">
+
+    <section id="profile">
+      <h2>Profile</h2>
+      <p>
+      I’m a Machine Learning practitioner with 5+ years of experience in 
+      helping businesses build and manage data-driven products. 
+      My background sits at the intersection of data science and technical product 
+      management, partnering with cross functional teams and stakeholders to
+      deliver customer data products at scale. 
+      </p>
+      
+      <p>
+      As an M.S. candidate at the Center for Data Science, Courant Institute, 
+      New York University, I’m currently building deeper expertise in 
+      <strong>probabilistic modelling, statistical inference, and modern machine learning</strong>. 
+      I’m particularly interested in using these tools to understand 
+      sophisticated, evolving systems, with a focus on <strong>time-series</strong> modelling 
+      and <strong>large language models</strong>.
+      </p>
+
+      <p>
+      Before NYU, I worked as a <strong>Data and AI Consultant at Accenture London</strong>, 
+      helping clients in <strong>financial-services</strong> connect the dots between data and product. 
+      My work ranged from analysing millions of records to shaping how data was structured, 
+      governed, and exchanged between businesses and customers.
+      </p>
+
+    </section>
+
+    <section id="experience">
+    <h2>Relevant Experience</h2>
+      <p>Here is a brief timeline of my work experience:</p>
+
+      <ul class="experience-list">
+        <li>Teaching Assistant for Linear Algebra and Optimization — New York University | 2025–Present</li>
+        <li>Data &amp; Analytics Consultant, Financial Services — Accenture, London | 2022–2025</li>
+        <li>Data Analyst &amp; Contributor — Vogue Business, London | 2022–2024</li>
+        <li>Research Analyst — Kantar, Dubai | 2021</li>
+      </ul>
+      
+      <p>For a detailed CV, feel free to get in touch via <a href="mailto:rdj2033@nyu.edu"><u>email</u></a> or <a href="https://www.linkedin.com/in/rutuja-jadhav-b96b2aa7/" target="_blank" rel="noopener noreferrer"><u>LinkedIn</u></a>.</p>
+
+    </section>
+
+    <section id="projects">
+      <h2>Projects</h2>
+
+      <h3><a href="https://rutuja-jadhav-github.github.io/survival-analysis/" target="_blank" rel="noopener noreferrer">Augmenting Kaplan-Meier Survival Analysis using Ensemble ML Techniques and Containerized Deployment ↗</a></h3>
+      <p>Developed a Random Survival Forest and XGBSE based application for 
+      customer churn prediction and deployed it through Streamlit. Containerized
+      the app and FastAPI model-serving layer with Docker and Docker Compose for reproducible, 
+      multi-service deployment.</p>
+
+      <h3><a href="https://rutuja-jadhav-github.github.io/rec-sys/" target="_blank" rel="noopener noreferrer">ALS Recommender System for MovieLens with PySpark ↗</a></h3>
+      <p>Spark-based movie recommender system comparing popularity baselines, item/user collaborative filtering, 
+      and ALS matrix factorization (explicit and implicit).</p>
+
+      <h3><a href="https://rutuja-jadhav-github.github.io/Beyond-Markowitz-Optimisation-RF-GBM/" target="_blank" rel="noopener noreferrer">Beyond Markowitz: Portfolio Optmization with Random Forests and Light GBM ↗</a></h3>
+      <p>End-to-end, walk-forward pipeline feeding ML (Random Forest, LightGBM) vs. historical-mean 
+      return forecasts into four portfolio optimizers — Equal-Weight, Penalised & Regularised Mean-Variance (Markowitz), 
+      and Drawdown-Penalised — across 50 S&P 500 stocks.</p>
+
+      <h3><a href="https://rutuja-jadhav-github.github.io/rate-my-professor-regression-regularisation-analysis-nyu-cds/notebooks/RateMyProf_Analysis.html" target="_blank" rel="noopener noreferrer">Statistical Analysis of Ratings data with Regression and Regularisation ↗</a></h3>
+      <p>Statistical analysis of professor ratings using Bayesian shrinkage, non-parametric testing, 
+        bootstrapping, and Lasso regression—with a focus on rigorous inference under messy and sparse data.</p>
+
+    </section>
+
+    <section id="blog">
+      <h2><a href="https://rutuja-jadhav-github.github.io/Math-for-ML-Blog-byRutuja/" target="_blank" rel="noopener noreferrer">Math for ML Blog ✎</a></h2>
+      <p>I am collating my (wildly scattered) notes into a <a href="https://rutuja-jadhav-github.github.io/Math-for-ML-Blog-byRutuja/" target="_blank" rel="noopener noreferrer"><u>learning journal</u></a> to help myself and others in the 
+      same boat find a one-stop reference to some <strong>fundamental (and beautiful!) Linear Algebra proofs and ML derivations</strong>.
+      </p>
+    </section>
+
+    <section id="pubs">
+      <h2>Publications</h2>
+      
+        <ul class="experience-list">
+
+          <li>
+            <a href="https://www.vogue.com/article/discovering-the-levers-of-luxury-success-in-the-middle-east" target="_blank" rel="noopener noreferrer">
+            Discovering the levers of luxury success in the Middle East | <em>VOGUE BUSINESS</em> ↗</a> 
+          </li>
+
+          <li>
+            <a href="file:///Users/rutujajadhav/Downloads/Harnessing%20luxury%E2%80%99s%20cultural%20impact%20and%20multi-platform%20reach%20(5).pdf" target="_blank" rel="noopener noreferrer">
+            Harnessing luxury’s cultural impact and multi-platform reach | <em>VOGUE BUSINESS X Amazon Ads</em> ↗</a> 
+          </li>
+
+          <li>
+            <a href="https://www.bloomsburyfashioncentral.com/business-case?docid=b-9781350928503&tocid=b-9781350928503-013&st=tanishq" target="_blank" rel="noopener noreferrer">
+            Tanishq: Cultural Branding in the Age of Cancel Culture | <em>BLOOMSBURY, DOI: 10.5040/9781350928503.013</em> ↗</a> 
+          </li>
+
+          <li>
+            <a href="https://www.vogue.com/article/chinas-wealthiest-maintain-a-quieter-stance-on-luxury-as-the-economic-outlook-deflates-in-q3-barclays" target="_blank" rel="noopener noreferrer">
+            China’s wealthiest maintain a ‘quieter’ stance on luxury as the economic outlook deflates in Q3 | <em>VOGUE BUSINESS X BARCLAYS</em> ↗</a> 
+          </li>
+
+          <li>
+            <a href="https://www.vogue.com/article/q2-sees-the-chinese-luxury-market-perform-beyond-q1-expectations-barclays" target="_blank" rel="noopener noreferrer">
+            Q2 sees the Chinese luxury market perform beyond Q1 expectations | <em>VOGUE BUSINESS X BARCLAYS</em> ↗</a> 
+          </li>
+
+          <li>
+            <a href="https://www.vogue.com/article/fashion-and-finance-the-new-economic-realities-of-luxury-consumers" target="_blank" rel="noopener noreferrer">
+            Fashion and finance: The new economic realities of luxury consumers | <em>VOGUE BUSINESS</em> ↗</a> 
+          </li>
+
+          <li>
+            <a href="https://www.vogue.com/article/powering-up-automating-the-future-of-luxury-logistics" target="_blank" rel="noopener noreferrer">
+            Powering up: Automating the future of luxury logistics | <em>VOGUE BUSINESS</em> ↗</a> 
+          </li>
+
+          <li>
+            <a href="https://www.vogue.com/article/immortalising-luxury-how-brands-can-own-the-resale-revolution" target="_blank" rel="noopener noreferrer">
+            Immortalising luxury: How brands can own the resale revolution | <em>VOGUE BUSINESS</em> ↗</a> 
+          </li>
+
+
+          
+    
+ 
+
+
+        </ul>
+    
+    
+    
+    
+    
+    </section>
+
+  </main>
+
 </div>
 
-<div class="pagination">
-  {% if paginator.next_page %}
-    <a class="pagination-item older" href="{{ site.baseurl }}page{{paginator.next_page}}">Older</a>
-  {% else %}
-    <span class="pagination-item older">Older</span>
-  {% endif %}
-  {% if paginator.previous_page %}
-    {% if paginator.page == 2 %}
-      <a class="pagination-item newer" href="{{ site.baseurl }}">Newer</a>
-    {% else %}
-      <a class="pagination-item newer" href="{{ site.baseurl }}page{{paginator.previous_page}}">Newer</a>
-    {% endif %}
-  {% else %}
-    <span class="pagination-item newer">Newer</span>
-  {% endif %}
-</div>
+</body>
+</html>

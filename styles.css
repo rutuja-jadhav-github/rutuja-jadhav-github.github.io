@@ -1,0 +1,236 @@
+/* =========================
+   GLOBAL RESET (NO SURPRISE STYLES)
+========================= */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Inter", system-ui, -apple-system, Segoe UI, Arial, sans-serif;
+  color: #1f1f1f;
+  background: #ffffff;
+}
+
+/* =========================
+   MAIN LAYOUT
+========================= */
+
+.container {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* =========================
+   LEFT SIDEBAR
+========================= */
+
+.sidebar {
+  width: 480px;
+  padding-top: 40px;
+  padding-right: 60px;
+  padding-bottom: 90px;
+  padding-left: 160px;
+  background: #f4f4f4;
+}
+/* NAME
+.sidebar h1 {
+  font-size: 1.55rem;
+  font-weight: 600;
+  margin: 0 0 10px 0;
+  letter-spacing: -0.2px;
+} */
+
+
+/* NAME */
+.sidebar h1 {
+  font-size: 1.90rem;
+  font-weight: 700;
+  letter-spacing: -0.3px;
+  color: #111;
+}
+
+
+
+/* SUBTITLE */
+.sidebar p {
+  font-size: 0.88rem;
+  font-weight: 400;
+  line-height: 1.4;
+  color: #666;
+  margin-top: -8px;
+}
+
+.profile-pic {
+  width: 230px;
+  height: 230px;
+  border-radius: 50%;
+  object-fit: cover;
+  /*object-position: center 80%;*/
+  margin-top: 14px;
+  margin-bottom: 20px;
+}
+
+/* =========================
+   SIDEBAR GROUPING SYSTEM
+========================= */
+
+.sidebar-group {
+  margin-top: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;              /* tight spacing inside group */
+  margin-bottom: 6px;    /* separation between groups */
+}
+
+/* =========================
+   LINK RESET (IMPORTANT FIX)
+   - removes ALL blue + underline globally in sidebar context
+========================= */
+
+
+/* LINKS */
+.sidebar a {
+  font-size: 0.84rem;
+  font-weight: 400;
+  color: #222;
+  text-decoration: none;
+}
+
+/* Hover = subtle, not underline (clean modern UI) */
+.sidebar a:hover {
+  opacity: 0.7;
+}
+
+/* =========================
+   RIGHT CONTENT AREA
+========================= */
+
+.content {
+  flex: 1;
+  padding: 48px;
+}
+
+.content section {
+  max-width: 690px;
+  margin-bottom: 60px;
+}
+
+
+/* HEADINGS */
+h2 {
+  font-size: 1.2rem;
+  margin: 40px 0 12px 0;
+}
+
+h3 {
+  font-size: 1rem;
+  margin: 12px 0 4px 0;
+}
+
+/* TEXT */
+p {
+  font-size: 0.92rem;
+  line-height: 1.5;
+  margin: 0 0 10px 0;
+}
+
+/* CONTENT LINKS ONLY (RIGHT SIDE) */
+.content a {
+  color: #000000;
+  text-decoration: none;
+}
+
+.content a:hover {
+  text-decoration: underline;
+}
+
+.content p {
+  color: #444;
+}
+
+.sidebar .strong-line {
+  font-weight: 600;
+  color: #666;
+}
+
+.experience-list {
+  margin-top: 0;
+  padding-left: 20px;
+}
+
+.experience-list li {
+  font-size: 0.92rem;
+  line-height: 1.5;
+  margin-bottom: 10px;
+  color: #555;
+}
+
+
+/* =========================
+   STICKY TOP NAVIGATION
+========================= */
+
+.top-nav {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+
+  height: 52px;
+  display: flex;
+  align-items: center;
+
+  background: #ffffff;
+  border-bottom: 1px solid #eeeeee;
+}
+
+.top-nav-links {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  gap: 28px;
+  padding: 0 48px;
+}
+
+.top-nav a {
+  font-size: 0.84rem;
+  color: #444;
+  text-decoration: none;
+}
+
+.top-nav a:hover {
+  color: #000;
+}
+
+/* =========================
+LEFT SOCIAL LINKS NAVIGATION
+========================= */
+
+.social-links {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 9px;
+  margin-top: 16px;
+}
+
+.social-links a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  font-size: 0.84rem;
+  color: #333;
+  text-decoration: none;
+}
+
+.social-links i {
+  width: 18px;
+  font-size: 16px;
+  text-align: center;
+}
+
+.social-links a:hover {
+  color: #777;
+}
