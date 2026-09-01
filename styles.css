@@ -384,3 +384,12 @@ LEFT SOCIAL LINKS NAVIGATION
   }
 
 }
+
+footer {
+  text-align: center;
+  font-size: 0.78rem;
+  color: #888;
+  padding: 30px 20px;
+  margin-top: 0px;
+  border-top: 1px solid #eeeeee;
+}
