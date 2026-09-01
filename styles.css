@@ -28,6 +28,7 @@ body {
 
 .sidebar {
   width: 480px;
+  flex-shrink: 0;
   padding-top: 40px;
   padding-right: 60px;
   padding-bottom: 90px;
@@ -62,12 +63,13 @@ body {
   margin-top: -8px;
 }
 
+
 .profile-pic {
   width: 230px;
   height: 230px;
+  max-width: 100%;
   border-radius: 50%;
   object-fit: cover;
-  /*object-position: center 80%;*/
   margin-top: 14px;
   margin-bottom: 20px;
 }
@@ -109,8 +111,10 @@ body {
 
 .content {
   flex: 1;
+  min-width: 0;
   padding: 48px;
 }
+
 
 .content section {
   max-width: 690px;
@@ -233,4 +237,87 @@ LEFT SOCIAL LINKS NAVIGATION
 
 .social-links a:hover {
   color: #777;
+}
+
+
+/* =========================
+   RESPONSIVE DESIGN
+========================= */
+
+@media (max-width: 900px) {
+
+  .container {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    padding: 30px 40px;
+  }
+
+  .content {
+    width: 100%;
+    padding: 40px;
+  }
+
+  .content section {
+    max-width: 100%;
+  }
+
+}
+
+@media (max-width: 600px) {
+
+  .top-nav {
+    height: auto;
+    padding: 12px 20px;
+  }
+
+  .top-nav-links {
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: 12px 18px;
+    padding: 0;
+  }
+
+  .top-nav a {
+    font-size: 0.78rem;
+  }
+
+  .sidebar {
+    padding: 28px 24px 40px 24px;
+  }
+
+  .sidebar h1 {
+    font-size: 1.6rem;
+  }
+
+  .profile-pic {
+    width: 180px;
+    height: 180px;
+  }
+
+  .content {
+    padding: 32px 24px 60px 24px;
+  }
+
+  h2 {
+    font-size: 1.1rem;
+    margin-top: 25px;
+  }
+
+  h3 {
+    font-size: 0.95rem;
+  }
+
+  p,
+  .experience-list li {
+    font-size: 0.88rem;
+    line-height: 1.5;
+  }
+
+  .content section {
+    margin-bottom: 45px;
+  }
+
 }
