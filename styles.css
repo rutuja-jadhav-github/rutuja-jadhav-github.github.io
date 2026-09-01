@@ -27,12 +27,12 @@ body {
 ========================= */
 
 .sidebar {
-  width: 480px;
+  width: 500px;
   flex-shrink: 0;
   padding-top: 40px;
   padding-right: 60px;
   padding-bottom: 90px;
-  padding-left: 160px;
+  padding-left: 180px;
   background: #f4f4f4;
 }
 /* NAME
@@ -65,8 +65,8 @@ body {
 
 
 .profile-pic {
-  width: 230px;
-  height: 230px;
+  width: 240px;
+  height: 240px;
   max-width: 100%;
   border-radius: 50%;
   object-fit: cover;
@@ -207,6 +207,10 @@ p {
   color: #000;
 }
 
+.menu-toggle {
+  display: none;
+}
+
 /* =========================
 LEFT SOCIAL LINKS NAVIGATION
 ========================= */
@@ -246,14 +250,40 @@ LEFT SOCIAL LINKS NAVIGATION
 
 @media (max-width: 900px) {
 
+  /* SIDEBAR BECOMES TOP PROFILE PANEL */
+
   .container {
     flex-direction: column;
   }
 
   .sidebar {
     width: 100%;
-    padding: 30px 40px;
+    padding: 35px 40px 40px 40px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
   }
+
+  .sidebar h1 {
+    margin-bottom: 10px;
+  }
+
+  .sidebar p {
+    text-align: center;
+  }
+
+  .profile-pic {
+    width: 200px;
+    height: 200px;
+  }
+
+  .social-links {
+    align-items: center;
+  }
+
+  /* CONTENT */
 
   .content {
     width: 100%;
@@ -264,28 +294,61 @@ LEFT SOCIAL LINKS NAVIGATION
     max-width: 100%;
   }
 
+  /* NAV */
+
+  .top-nav {
+    height: 52px;
+    justify-content: flex-end;
+    padding: 0 24px;
+  }
+
+  .menu-toggle {
+    display: block;
+    background: none;
+    border: none;
+    font-size: 20px;
+    color: #333;
+    cursor: pointer;
+    padding: 8px;
+  }
+
+  .top-nav-links {
+    display: none;
+
+    position: absolute;
+    top: 52px;
+    right: 0;
+
+    width: 220px;
+
+    flex-direction: column;
+    gap: 0;
+
+    padding: 10px 0;
+
+    background: #ffffff;
+    border: 1px solid #eeeeee;
+  }
+
+  .top-nav-links.show {
+    display: flex;
+  }
+
+  .top-nav-links a {
+    padding: 12px 20px;
+    font-size: 0.84rem;
+  }
+
+  .top-nav-links a:hover {
+    background: #f7f7f7;
+  }
+
 }
 
 @media (max-width: 600px) {
 
-  .top-nav {
-    height: auto;
-    padding: 12px 20px;
-  }
-
-  .top-nav-links {
-    justify-content: flex-start;
-    flex-wrap: wrap;
-    gap: 12px 18px;
-    padding: 0;
-  }
-
-  .top-nav a {
-    font-size: 0.78rem;
-  }
-
   .sidebar {
-    padding: 28px 24px 40px 24px;
+    padding: 28px 24px 35px 24px;
   }
 
   .sidebar h1 {
